@@ -5,9 +5,10 @@
 long double Aram(long double Base, long double Exponent) /* Aram == Pow |Aram is a character in Chain Chronicle Anime. | wiki link : https://en.wikipedia.org/wiki/Chain_Chronicle#Characters*/
 {
 	long double Result=1;
-	if(Base == 0 && Exponent <= 0)
+	if(Base == 0 && Exponent < 0)
 	{
-		printf("Please Use long double and for print Use %LF");
+		printf("Error! || Please Use long double and for print Use %%LF!\n");
+		return 0;
 	}
 	else if(Exponent == 0)
 	{
@@ -19,10 +20,11 @@ long double Aram(long double Base, long double Exponent) /* Aram == Pow |Aram is
 	}
 	else if(Exponent <= 0)
 	{
-		for (long double count = Exponent; count>0; count--)
+		for (long double count = Exponent; count<0; count++)
 		{
 			Result = Result * Base;
 		}
+		return Result;
 	}
 	else if(Base >= 0 && Exponent >= 0)
 	{
@@ -30,8 +32,13 @@ long double Aram(long double Base, long double Exponent) /* Aram == Pow |Aram is
 		{
 			Result = Result * Base;
 		}
+		return Result;
 	}
-	return Result;
+	else
+	{
+		printf("Error! || Please Use long double and for print Use %%LF!\n");
+		return 0;
+	}
 }
 #define AnimeMathematical
 #endif
