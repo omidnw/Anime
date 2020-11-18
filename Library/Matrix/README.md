@@ -1,5 +1,4 @@
 # Matrix Calculator
-==================
 
 This is a 2D matrix calculator wirtten in C for AnimeLIB.
 Have fun using this
@@ -30,7 +29,7 @@ float **m1 = CreateArray(2,2);
 
 Uses int as input for array row and column length and returns float array as a 2D array.
 
-example
+Example
 ---------
 here is the full code
 
